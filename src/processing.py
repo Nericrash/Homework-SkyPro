@@ -15,3 +15,9 @@ def filter_by_state(list_of_id: list[dict[str, Any]], state: str = "EXECUTED") -
         if data.get("state") == state:
             result.append(data)
     return result
+
+
+def sort_by_date(list_of_id: list[dict[str, Any]], reverse_list: bool = True) -> list[dict[str, Any]]:
+    """Функция сортирует словари по дате"""
+    sorted_list = sorted(list_of_id, key=lambda d: d["date"], reverse=reverse_list)
+    return sorted_list
