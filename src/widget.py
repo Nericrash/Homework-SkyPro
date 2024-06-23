@@ -17,7 +17,3 @@ def get_data(data: str) -> str:
 
     data = datetime.strptime(data, format("%Y-%m-%dT%H:%M:%S.%f"))
     return data.strftime("%d.%m.%Y")
-
-
-if __name__ == "__main__":
-    print(get_data("2018-07-11T02:26:18.671407"))

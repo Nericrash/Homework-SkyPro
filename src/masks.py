@@ -13,7 +13,3 @@ def get_mask_account(account_number: List[int]) -> str:
     str_account_number = str(account_number)
     mask_account_number = "**" + str_account_number[-4:]
     return mask_account_number
-
-
-if __name__ == "__main__":
-    print(get_mask_card_number("7000792289606361"))
