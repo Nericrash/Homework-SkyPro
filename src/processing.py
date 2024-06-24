@@ -8,16 +8,16 @@ list_of_id = [
 ]
 
 
-def filter_by_state(list_of_id: list[dict[str, Any]], state: str = "EXECUTED") -> list[dict[str, Any]]:
+def filter_by_state(list_of_ids: list[dict[str, Any]], state: str = "EXECUTED") -> list[dict[str, Any]]:
     """Функция принимает список словарей и значение state и возвращающае список словарей отсортированных по state"""
-    result = []
-    for data in list_of_id:
-        if data.get("state") == state:
-            result.append(data)
+    filtered_list = []
+    for input_data in list_of_ids:
+        if input_data.get("state") == state:
+            filtered_list.append(input_data)
     return result
 
 
-def sort_by_date(list_of_id: list[dict[str, Any]], reverse_list: bool = True) -> list[dict[str, Any]]:
+def sort_by_date(list_of_id: list[dict[str, Any]], is_reverse_list: bool = True) -> list[dict[str, Any]]:
     """Функция сортирует словари по дате"""
-    sorted_list = sorted(list_of_id, key=lambda d: d["date"], reverse=reverse_list)
-    return sorted_list
+    sorted_dicts = sorted(list_of_id, key=lambda d: d["date"], reverse=is_reverse_list)
+    return sorted_dicts
