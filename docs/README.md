@@ -10,5 +10,6 @@ git clone https://github.com/Nericrash/Homework10_1.git
 ```
 pip instal -r requirements.txt
 ```
+## Существует директ "tests" для осуществления тестирования имеющихся функций
 ## Авторы:
 Яков Исикеев под наставничеством команды онлайн школы SkyPro
