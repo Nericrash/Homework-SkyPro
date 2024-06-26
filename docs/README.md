@@ -10,6 +10,10 @@ git clone https://github.com/Nericrash/Homework10_1.git
 ```
 pip instal -r requirements.txt
 ```
-## Существует директ "tests" для осуществления тестирования имеющихся функций
+## Тестирование:
+Необходимо установить pytest
+poerty add --group dev pytest
+poetry add --group dev pytest-cov
+
 ## Авторы:
 Яков Исикеев под наставничеством команды онлайн школы SkyPro
