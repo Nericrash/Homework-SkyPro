@@ -1,6 +1,6 @@
-from src.masks import get_mask_card_number
-from src.masks import get_mask_account
 from datetime import datetime
+
+from src.masks import get_mask_account, get_mask_card_number
 
 
 def mask_account_card(number_card: str) -> str:
@@ -16,7 +16,7 @@ def mask_account_card(number_card: str) -> str:
 
 
 def get_data(data: str) -> str:
-    ''' Функция для работы с датой '''
+    """Функция для работы с датой"""
 
     data = datetime.strptime(data, format("%Y-%m-%dT%H:%M:%S.%f"))
     return data.strftime("%d.%m.%Y")

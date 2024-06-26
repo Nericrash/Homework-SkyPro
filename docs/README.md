@@ -15,5 +15,10 @@ pip instal -r requirements.txt
 poerty add --group dev pytest
 poetry add --group dev pytest-cov
 
+Запуск тестирования:
+-Откройте окно Edit Configurations
+-Выберите pytest
+-Укажите директорию с тестами и директорию проекта в целом.
+
 ## Авторы:
 Яков Исикеев под наставничеством команды онлайн школы SkyPro
