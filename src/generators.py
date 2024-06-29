@@ -1,4 +1,4 @@
-from typing import  Generator
+from typing import Generator
 
 transactions = (
     [
@@ -79,6 +79,7 @@ transactions = (
         }
     ]
 )
+
 
 def filter_by_currency(transactions: list[dict], cod_curr: str) -> Generator[dict, None, None]:
     """Генератор - принимает список словарей и возвращает операции, в которых указана заданная валюта."""

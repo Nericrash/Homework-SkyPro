@@ -1,10 +1,7 @@
-import pytest
-
-
 from src.generators import filter_by_currency, transaction_descriptions, card_number_generator, transactions
 
 
-def test_filter_by_currency(test_transactions, cod_curr = "USD"):
+def test_filter_by_currency(test_transactions, cod_curr="USD"):
     generator = filter_by_currency(transactions, cod_curr)
     assert next(generator) == {
         "id": 939719570,
@@ -42,6 +39,7 @@ def test_transaction_descriptions(test_transactions):
     assert next(generator) == "Перевод со счета на счет"
     assert next(generator) == "Перевод с карты на карту"
     assert next(generator) == "Перевод организации"
+
 
 def test_card_number_generator(start=1, end=5):
     generator = card_number_generator(start, end)
