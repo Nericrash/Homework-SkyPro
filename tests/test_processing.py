@@ -5,14 +5,7 @@ from src.processing import (filter_by_state,
                             list_of_ids)
 
 
-@pytest.fixture
-def test_list_ids():
-    return list_of_ids
 
-
-@pytest.fixture
-def test_list():
-    return 'EXECUTED'
 
 
 def test_filter_by_state(test_list):
