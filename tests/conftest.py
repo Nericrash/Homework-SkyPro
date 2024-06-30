@@ -15,4 +15,4 @@ def test_list_ids():
 
 @pytest.fixture
 def test_list():
-    return 'EXECUTED'
+    return "EXECUTED"
