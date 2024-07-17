@@ -10,14 +10,8 @@ from requests import RequestException
 load_dotenv()
 api_key = os.getenv("API_KEY")
 
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s: %(filename)s: %(levelname)s: %(message)s",
-    filename="../logs/utils.log",
-    filemode="w",
-                    )
-
 logger = logging.getLogger("utils")
+
 
 def get_transactions_dictionary(path: str) -> Any:
     """Принимает путь до JSON-файла и возвращает список словарей с данными о финансовых транзакциях"""
@@ -52,7 +46,6 @@ def transaction_amount_in_rub(transactions: list, transaction_id: int) -> Any:
                 transaction_convert["amount"] = transaction["operationAmount"]["amount"]
                 transaction_convert["currency"] = transaction["operationAmount"]["currency"]["code"]
                 logger.info(f"Operation amount in {transaction_convert["currency"]}:{transaction_convert["amount"]}")
-#                print(transaction_convert)
                 rub_amount = round(convert_to_rub(transaction_convert), 2)
                 if rub_amount != 0:
                     logger.info(f"Operation amount in RUB:{rub_amount}")
@@ -86,8 +79,3 @@ def convert_to_rub(transaction_convert: dict) -> Any:
             return rub_amount
     except RequestException:
         return 0
-
-
-# if __name__ == "__main__":
-#     transactions = get_transactions_dictionary("../data/operations.json")
-#     print(transaction_amount_in_rub(transactions, 41428829))
