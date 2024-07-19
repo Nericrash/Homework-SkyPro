@@ -1,5 +1,4 @@
 import logging
-from typing import List
 
 logger = logging.getLogger("masks")
 logger.setLevel(logging.INFO)
@@ -11,7 +10,7 @@ file_handler.setFormatter(file_formatter)
 logger.addHandler(file_handler)
 
 
-def get_mask_card_number(number_card: List[int]) -> str:
+def get_mask_card_number(number_card: list) -> str:
     """Функция принимает на вход номер карты и возвращает маскированную."""
     str_card_number = str(number_card)
     try:
@@ -21,7 +20,7 @@ def get_mask_card_number(number_card: List[int]) -> str:
         logger.error("Error")
 
 
-def get_mask_account(account_number: List[int]) -> str:
+def get_mask_account(account_number: list) -> str:
     """Функция принимает на вход номер счета и возвращает замаскированный"""
     str_account_number = str(account_number)
     try:
