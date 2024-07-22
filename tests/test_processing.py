@@ -1,4 +1,4 @@
-from src.processing import filter_by_state, sort_by_date, list_of_ids
+from src.processing import filter_by_state, list_of_ids, sort_by_date
 
 
 def test_filter_by_state(test_list):
