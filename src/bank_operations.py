@@ -1,5 +1,5 @@
-import re
 from collections import Counter
+import re
 
 
 def get_category_counter_by_description(dictionaries: list[dict], operations: list) -> dict:
